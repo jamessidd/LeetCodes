@@ -1,16 +1,9 @@
-class Solution(object):
-    def kidsWithCandies(self, candies, extraCandies):
-        """
-        :type candies: List[int]
-        :type extraCandies: int
-        :rtype: List[bool]
-        """
-        candiesset = set(candies)
+class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        maxCandies = max(candies)
         res = []
-        for i, candy in enumerate(candies):
-            
-            if candy + extraCandies >= max(candiesset):
-                res.append(True)
-            else:
-                res.append(False)
+
+        for numCandies in candies:
+            res.append(numCandies + extraCandies >= maxCandies)
+        
         return res
