@@ -7,7 +7,7 @@ class Solution(object):
         """
         currsum = sum(nums[:k])
         maxsum = currsum
-        print(currsum)
+
         for i in range(k, len(nums)):
 
             currsum -= nums[i - k]
