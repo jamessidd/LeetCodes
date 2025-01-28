@@ -8,7 +8,7 @@ class Solution(object):
         vowels = set('aeiou')
         currcount = sum([1 for char in s[:k] if char in vowels])
         maxcount = currcount
-        print(currcount)
+
         for i in range(k, len(s)):
 
             if s[i - k] in vowels:
