@@ -5,7 +5,6 @@ class Solution(object):
         :rtype: int
         """
         left = 0
-        right = 0
         maxcount = 0
         dels = 1
         for right in range(len(nums)):
