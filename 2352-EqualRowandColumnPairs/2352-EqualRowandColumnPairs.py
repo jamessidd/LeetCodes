@@ -12,10 +12,6 @@ class Solution(object):
 
                 rdict[row].append(grid[row][col])
                 cdict[col].append(grid[row][col])
-
-        print(rdict)
-        print(cdict)
-
         count = 0
         for rows in rdict.values():
 
