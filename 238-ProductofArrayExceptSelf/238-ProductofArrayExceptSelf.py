@@ -4,19 +4,20 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        res = [1] * len(nums)
 
-        prefix = 1
+        answer = [1] * len(nums)
+        curr = 1
 
-        for i in range(len(nums)):
-            res[i] *= prefix
-            prefix *= nums[i]
-        i = len(nums)
+        for i, num in enumerate(nums):
+            answer[i] *= curr
+            curr *= num
+
+        end = len(nums) - 1
         postfix = 1
-        while i > 0:
-            i -= 1
-            res[i] *= postfix
-            postfix *= nums[i]
-        return res
+        while end >= 0:
 
-        
+            answer[end] *= postfix
+            postfix *= nums[end]
+            end -= 1
+
+        return answer
