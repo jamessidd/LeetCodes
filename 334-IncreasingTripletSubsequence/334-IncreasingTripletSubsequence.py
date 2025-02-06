@@ -8,13 +8,14 @@ class Solution(object):
         first = float('INF')
         second = float('INF')
 
-        for i, num in enumerate(nums):
+        for num in nums:
 
             if num <= first:
                 first = num
             elif num <= second:
                 second = num
+
             else:
                 return True
 
-        return False 
+        return False
